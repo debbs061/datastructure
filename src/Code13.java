@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
 /**
- * n개의 음이 아닌 한 자리 정수를 입력받아 배열에 저장
+ *  n개의 음이 아닌 한 자리 정수를 입력받아 배열에 저장
+ *  이들 중에서 1개 이상의 연속된 정수들을 이어붙여 얻을 수 있는 소수들 중에서 최대값을 구하여 출력하라
  */
 public class Code13 {
     public static void main(String[] args) {

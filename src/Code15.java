@@ -3,6 +3,7 @@ import java.util.Scanner;
 /**
  * Ordered list 에 insert 하는 알고리즘 (Bubble sort 개념 존재)
  * 현재까지 입력된 정수들을 정렬된 상태로 출력하라
+ * ex) 입력: 4  .. 5 2 1 9
  */
 public class Code15 {
     public static void main(String[] args) {
