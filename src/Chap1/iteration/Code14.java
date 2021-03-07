@@ -1,3 +1,5 @@
+package Chap1.iteration;
+
 import java.util.Scanner;
 
 /**
