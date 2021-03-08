@@ -23,7 +23,5 @@
 - LinkedList 안에 Node들이 저장되어 있는 개념은 아니다.
 
 
-### 노드와 연결리스트를 직접 구현해보자
+### 연결리스트를 직접 구현해보자
 - MySingleLinkedList.java
-- Node.java
-
