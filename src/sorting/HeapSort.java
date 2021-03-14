@@ -9,33 +9,43 @@ public class HeapSort {
         a[idx2] = tmp;
     }
 
-    // 배열 a를 left부터 right까지 힙 구조로 만든다
-    static void downHeap(int[] a, int left, int right) {
-        int root = a[left];
-        int child;
-        int parent;
+    static void heapSort(int a[], int n) {
+        // 먼저 전체 트리 구조를 최대 힙 구조로 바꿈 ( 1부터 시작하는 down-heapify)
+        for (int i = 1; i < n; i++) {
+            int c = i;
+            // 재귀적으로 계속 자기 부모 노드로 이동하면서, 힙 구조를 만들어주는 것임
+            do {
+                int root = (c-1) / 2; // 특정한 원소의 부모를 가리킴
+                if (a[root] < a[c]) // 부모의 값보다 자식의 값이 크면 위치를 바꿔준다
+                    swap(a, root, c);
 
-        for (parent = left; parent < (right + 1) / 2; parent = child) {
-            int cl = parent * 2 + 1;
-            int cr = cl + 1;
-            child = (cr <= right && a[cr] > a[cl]) ? cr : cl; // 왼쪽자식,오른쪽자식 중 큰값을 선택
-            if (root >= a[child])   // 부모가 자식노드보다 더 크면 종료
-                break;
-            a[parent] = a[child]; // 부모가 자식노드보다 작으면 exchange 한 후
+                // 루트를 한단계 올려서 위에부분도 다 heapify 수행시켜줌
+                c = root;
+            } while (c != 0);
         }
-        a[parent] = root; // 부모 노드 변경
-    }
 
-    static void heapSort(int[] a, int n) {
-        // 힙 정렬을 하기 위해서는 먼저, 배열을 힙 구조로 만들어야 함
-        // 힙 구조가 아닌 트리를 힙 구조로 만들 때, 전체 개수에서 1/2개만 보면 됨
-        for (int i = (n - 1) / 2; i >= 0; i--)
-            downHeap(a, i, n - 1);
+        // 크기를 줄여가며 반복적으로 힙 구성 (크기를 줄이고 -> 힙을 만들어주고, 크기를 줄이고 -> 힙을 만들어주고..
+        // 이 과정을 n번 반복하면 힙 정렬이 만들어지는 것
+        for (int i = n - 1; i >= 0; i--) {
+            // 1) 가장 큰 값을 맨 뒤로 보냄
+            swap(a, 0, i);  // 가장 큰 값(0번 인덱스) 와 가장 뒤에 있는 노드를 바꿔줌
 
-        // 힙 구조를 가지고 힙 정렬 수행하기
-        for (int i = n - 1; i > 0; i--) {
-            swap(a, 0, i); // root 요소와 마지막 요소 교환
-            downHeap(a, 0, i - 1); // root 요소가 마지막으로 갔으니까(max값), 그거 제외하고 다시 heapify
+            // 2) 최대 힙 구조가 무너졌으므로, 다시 힙 구조를 만듬
+            int root = 0;
+            int c = 1;
+            do {
+                c = 2 * root + 1;   // root 의 자식 (root부터 down-heapify 해줌)
+                // 자식 중에 더 큰 값 찾기
+                // c < i-1 ::: 범위를 벗어나지 않게 해준거임 ( 오른쪽자식은 c < i 니까 왼쪽은 c < i-1)
+                if (c < i - 1 && a[c] < a[c + 1]) { // 왼쪽 자식보다 오른쪽 자식이 더 크다면, 더 큰 값을 c에 담는다
+                    c++;
+                }
+                // 루트보다 자식이 크다면 교환
+                if (c < i && a[root] < a[c]) {
+                    swap(a, root, c);
+                }
+                root = c; // 다시 c를 root로 이동시켜 downheapify 진행
+            } while (c < i);
         }
     }
 

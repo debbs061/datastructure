@@ -8,13 +8,13 @@ class MergeSort {
     // 필요할 떄마다, 배열을 생성한다고 하면 비효율적으로 작동함 (불필요한 메모리 사용 문제를 해결 하기 위해)
     static int[] sorted;    // 정렬 배열
 
-    static void merge(int a[], int m, int middle, int n) {
-        int i = m;
+    static void merge(int a[], int left, int middle, int right) {
+        int i = left;
         int j = middle + 1;
-        int k = m;
+        int k = left;
 
         // 작은 순서대로 배열에 삽입
-        while (i <= middle && j <= n) {
+        while (i <= middle && j <= right) {
             if (a[i] <= a[j]) {
                 sorted[k] = a[i];
                 i++;
@@ -27,7 +27,7 @@ class MergeSort {
 
         // i가 모든 원소를 정렬배열에 넣었다면, 남은 j를 다 노넣어줘야함
         if (i > middle) {
-            for (int t = j; t <= n; t++) {
+            for (int t = j; t <= right; t++) {
                 sorted[k] = a[t];
                 k++;
             }
@@ -38,7 +38,7 @@ class MergeSort {
             }
         }
         // 정렬된 배열을 삽입
-        for (int t = m; t <= n; t++) {
+        for (int t = left; t <= right; t++) {
             a[t] = sorted[t];
         }
     }
