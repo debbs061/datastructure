@@ -9,7 +9,8 @@ public class SelectionSort {
         a[idx2] = tmp;
     }
 
-    // 단순 선택 정렬
+    // 가장 작은 것을 선택해서 앞으로 보낸다 (exchange)
+    // 앞에 있는 원소가 하나씩 줄어드는 방법
     static void selectionSort(int[] a, int n) {
         for (int i = 0; i < n - 1; i++) { // 가장 작은걸 앞으로 보낸다음 그 앞 원소를 제외하고 다시 선택
             int min = i;            // 아직 정렬되지 않은 부분에서 가장 작은 요소의 인덱스를 기록합니다.

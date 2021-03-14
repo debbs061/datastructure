@@ -10,12 +10,11 @@ class BubbleSort {
         a[idx2] = t;
     }
 
-    // 버블 정렬
-    // - 가장 큰 값이 맨 뒤로 이동. 뒤데 있는 원소가 하나씩 줄어들면서 정렬함
+    // 앞에서부터 두 원소를 비교하며 swaping.
+    // 결국 가장 큰 값이 맨 뒤로 이동. 뒤데 있는 원소가 하나씩 줄어들면서 정렬함
     static void bubbleSort(int[] a, int n) {
-        int i, j;
-        for (i = 0; i < n; i++) {
-            for (j = 0; j < n - 1 - i; j++) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n - 1 - i; j++) {
                 if (a[j] > a[j + 1]) {
                     swap(a, j, j + 1);
                 }

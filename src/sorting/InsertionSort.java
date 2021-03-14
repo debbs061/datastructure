@@ -9,7 +9,8 @@ public class InsertionSort {
         a[idx2] = tmp;
     }
 
-    //단순 삽입 정렬
+    // selectionSort, bubbleSort : 이미 정렬이 이루어져 있는 상태여도, 반드시 반복을 수행함 (비효율적)
+    // insertionSort : '필요할 때만' 위치를 바꿈. 앞에 있는 원소들이 이미 정렬되어 있다고 가정.
     static void insertionSort(int[] a, int n) {
         int j;
         for (int i = 0; i < n; i++) {
