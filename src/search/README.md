@@ -27,7 +27,6 @@
 ---
 
 ### 트리를 만들어 데이터를 삽입하고 각각의 데이터를 하나씩 탐색해보자 (포인터 이용)
-<br/>
 ### 1. 전위순회 (Preorder Traversal)
 방문순서 : `root → left → right`<br/>
 <img src="../img/preorder.jpeg" width="500"><br/>
