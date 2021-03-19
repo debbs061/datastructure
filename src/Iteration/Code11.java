@@ -1,4 +1,4 @@
-package Chap1.iteration;
+package Iteration;
 
 import java.util.Scanner;
 

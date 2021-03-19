@@ -1,4 +1,4 @@
-package Chap1.iteration;
+package Iteration;
 
 /**
  * 1에서 100000 사이의 모든 소수를 출력하라

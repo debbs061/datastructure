@@ -1,4 +1,4 @@
-package Chap4.LinkedList;
+package linkedList;
 
 
 import java.util.Iterator;
