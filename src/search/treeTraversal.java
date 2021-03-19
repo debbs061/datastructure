@@ -47,7 +47,7 @@ class Tree {
     public  void postorder(Node node) {
         if (node != null) {
             postorder(node.left);
-            preorder(node.right);
+            postorder(node.right);
             System.out.println(node.data);
         }
     }
