@@ -41,7 +41,6 @@ class Tree {
         if (node != null) {
             System.out.println(node.data); // 자기 자신 먼저 출력
             preorder(node.left);
-            preorder(node.left);
             preorder(node.right);
         }
     }
