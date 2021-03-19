@@ -9,8 +9,7 @@
   - 왼쪽 노드로 가자마자 오른쪽 노드 전체는 볼 필요가 없어진다.
   - 한 번 내려갈때마다 탐색해야 하는 데이터가 1/2씩 줄어든다는 점에서 결과적으로 높이가 Log n이 된다.
   
-
-  ![binaryTree](../img/binaryTree.jpeg)
+<img src="../img/binaryTree.jpeg" width="500">
 
 
 ### 이진트리는 어떻게 구현할 것인가?
