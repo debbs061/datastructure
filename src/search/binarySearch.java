@@ -1,10 +1,5 @@
 package search;
 
-/**
- * @FileName :
- * @Link : https://www.acmicpc.net/problem/
- * @Date : 2021/03/19
- */
 public class binarySearch {
     // 이진 탐색 (반복문)
     public static int binarySearch(int[] arr, int target, int start, int end) {
