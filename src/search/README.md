@@ -27,22 +27,21 @@
 ---
 
 ### 트리를 만들어 데이터를 삽입하고 각각의 데이터를 하나씩 탐색해보자 (포인터 이용)
-
-<br/><br/>
+<br/>
 ### 1. 전위순회 (Preorder Traversal)
 방문순서 : `root → left → right`<br/>
 <img src="../img/preorder.jpeg" width="500"><br/>
-1 → 2 → 4 → 5 → 3
+`1 → 2 → 4 → 5 → 3`
 <br/><br/><br/>
 
 ### 2. 중위순회 (Inorder Traversal)
 방문순서 : `left → root → right`<br/>
 <img src="../img/inorder.jpeg" width="500"><br/>
-4 → 2 → 5 → 1 → 3
+`4 → 2 → 5 → 1 → 3`
 <br/><br/><br/>
 
 ### 3. 후위순회 (Postorder Traversal)
 방문순서 : `left → right → root`<br/>
 <img src="../img/postorder.jpeg" width="500"><br/>
-4 → 5 → 2 → 3 → 1
+`4 → 5 → 2 → 3 → 1`
 <br/><br/><br/>
