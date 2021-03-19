@@ -33,15 +33,16 @@
 방문순서 : `root → left → right`<br/>
 <img src="../img/preorder.jpeg" width="500"><br/>
 1 → 2 → 4 → 5 → 3
-
+<br/>
 
 #### 2. 중위순회 (Inorder Traversal)
 방문순서 : `left → root → right`<br/>
 <img src="../img/inorder.jpeg" width="500"><br/>
 4 → 2 → 5 → 1 → 3
-
+<br/>
 
 #### 3. 후위순회 (Postorder Traversal)
 방문순서 : `left → right → root`<br/>
 <img src="../img/postorder.jpeg" width="500"><br/>
 4 → 5 → 2 → 3 → 1
+<br/>
