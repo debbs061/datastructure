@@ -10,39 +10,38 @@ public class QuickSort {
     }
 
     // 퀵정렬 (재귀버전)
-    static void quickSort(int[] a, int left, int right) {
-        int pl = left;
-        int pr = right;
-        int x = a[(pl + pr) / 2];
+    static void quickSort(int[] a, int start, int end) {
+        if (start >= end) // 원소가 1개인 경우 종료
+            return;
+        int pivot = start; // 피벗은 첫 번째 원소
+        int left = start + 1;
+        int right = end;
 
-        // 배열을 pivot을 기준으로 분할
-        do {
-            while (a[pl] < x)   // a[pl] >= x 가 성립하는 요소를 찾을 때까지 pl을 오른쪽으로 스캔
-                pl++;
-            while (a[pr] > x)   // a[pr] <= x 가 성립하는 요소를 찾을 때까지 pr을 왼쪽으로 스캔
-                pr--;
-            if (pl <= pr)       // pl이 가리키는 요소와 pr이 가리키는 요소 교환
-                swap(a, pl++, pr--);    // 교환 끝난 후 각각 한칸씩 이동해줘야 함
-        } while (pl <= pr);   // pl과 pr이 교차하면 그룹이 나누는 과정이 끝난다 (pl > pr이 되는 순간)
-
-        /*
-         피벗 이하의 그룹 : a[0], ... , a[pl-1]
-         피벗 이상의 그룹 : a[pr+1], ... , a[n-1]
-         */
-
-        // 정복 : 각각을 다시 recursion으로 정렬
-        // 요소의 개수가 1개인 그룹은 더 이상 그룹을 나눌 필요가 없음
-        if (left < pr) // 왼쪽 부분배열 정렬
-            quickSort(a, left, pr);
-        if (pl < right) // 오른쪽 부분배열 정렬
-            quickSort(a, pl, right);
+        while (left <= right) { // 두 원소가 엇갈리기 전까지 탐색
+            // pivot 보다 큰 데이터를 찾을 때까지 반복
+            while (left <= end && a[left] <= a[pivot])
+                left += 1;
+            // pivot 보다 작은 데이터를 찾을 때까지 반복
+            while (right > start && a[right] >= a[pivot])
+                right -= 1;
+            // 엇갈렸다면 작은 데이터와 pivot 을 교체 (여기서 작은 데이터는 right 값임)
+            if (left > right)
+                swap(a, right, pivot);
+            // 엇갈리지 않았다면 작은 데이터와 큰 데이터를 교체
+            else
+                swap(a, left, right);
+        }
+        // 분할 이후 왼쪽 부분과 오른쪽 부분에서 각각 정렬 수행 (재귀적으로)
+        quickSort(a, start, right - 1);
+        quickSort(a, right+1, end);
     }
+
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("퀵 정렬");
-        System.out.println("요소 수");
+        System.out.print("요소 수 : ");
         int n = sc.nextInt();
         int[] x = new int[n];
 
