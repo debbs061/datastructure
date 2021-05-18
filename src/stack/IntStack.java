@@ -1,4 +1,4 @@
-package queue;
+package stack;
 
 /*
  배열로 구현한 int 형 스택
