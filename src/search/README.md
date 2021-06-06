@@ -10,7 +10,7 @@
   - 왼쪽 노드로 가자마자 오른쪽 노드 전체는 볼 필요가 없어진다.
   - 한 번 내려갈때마다 탐색해야 하는 데이터가 1/2씩 줄어든다는 점에서 결과적으로 높이가 Log n이 된다.
 
-<img src="../../img/binaryTree.jpeg" width="500">
+![binaryTree2](images/binaryTree.jpeg)
 
 ---
 ### 이진트리는 어떻게 구현할 것인가?
@@ -30,18 +30,18 @@
 ### 트리를 만들어 데이터를 삽입하고 각각의 데이터를 하나씩 탐색해보자 (포인터 이용)
 ### 1. 전위순회 (Preorder Traversal)
 방문순서 : `root → left → right`<br/>
-<img src="imges/preorder.jpeg" width="500"><br/>
+![binaryTree2](images/preorder.jpeg)
 `1 → 2 → 4 → 5 → 3`
 <br/><br/><br/>
 
 ### 2. 중위순회 (Inorder Traversal)
 방문순서 : `left → root → right`<br/>
-<img src="imges/preorder.jpeg" width="500"><br/>
+![binaryTree2](images/inorder.jpeg)
 `4 → 2 → 5 → 1 → 3`
 <br/><br/><br/>
 
 ### 3. 후위순회 (Postorder Traversal)
 방문순서 : `left → right → root`<br/>
-<img src="imges/preorder.jpeg" width="500"><br/>
+![binaryTree2](images/postorder.jpeg)
 `4 → 5 → 2 → 3 → 1`
 <br/><br/><br/>
