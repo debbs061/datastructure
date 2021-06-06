@@ -1,4 +1,4 @@
-package search;
+package search.src;
 
 /**
         (1)

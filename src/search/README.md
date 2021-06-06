@@ -1,5 +1,6 @@
+# 이진트리 (Binary Tree)
+* [회전하는 배열](./src/searchRotatedArray.java)
 
-## 이진트리 (Binary Tree)
 ### 이진트리란
 - 비선형 자료구조
 - 데이터의 탐색 속도 증진을 위해 사용하는 구조
@@ -18,7 +19,7 @@
   - But, 완전 이진트리가 아닌 경우 배열로 표현하기 어렵다.
     - why? 완전이진트리가 아닌데 배열로 표현하게 되면..
 
-      ![binaryTree2](../../img/binaryTree2.jpeg)
+      ![binaryTree2](images/binaryTree2.jpeg)
       - 4개의 노드만 만들었을 뿐인데 실제로 배열에 담을 공간은 14개 만큼이나 필요하다.
       - 이런 메모리의 낭비를 줄이기 위해 포인터를 사용하는 것이다.
 
@@ -29,18 +30,18 @@
 ### 트리를 만들어 데이터를 삽입하고 각각의 데이터를 하나씩 탐색해보자 (포인터 이용)
 ### 1. 전위순회 (Preorder Traversal)
 방문순서 : `root → left → right`<br/>
-<img src="../../img/preorder.jpeg" width="500"><br/>
+<img src="imges/preorder.jpeg" width="500"><br/>
 `1 → 2 → 4 → 5 → 3`
 <br/><br/><br/>
 
 ### 2. 중위순회 (Inorder Traversal)
 방문순서 : `left → root → right`<br/>
-<img src="../../img/inorder.jpeg" width="500"><br/>
+<img src="imges/preorder.jpeg" width="500"><br/>
 `4 → 2 → 5 → 1 → 3`
 <br/><br/><br/>
 
 ### 3. 후위순회 (Postorder Traversal)
 방문순서 : `left → right → root`<br/>
-<img src="../../img/postorder.jpeg" width="500"><br/>
+<img src="imges/preorder.jpeg" width="500"><br/>
 `4 → 5 → 2 → 3 → 1`
 <br/><br/><br/>

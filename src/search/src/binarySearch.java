@@ -1,4 +1,4 @@
-package search;
+package search.src;
 
 public class binarySearch {
     // 이진 탐색 (반복문)
