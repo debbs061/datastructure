@@ -15,8 +15,8 @@ class BubbleSort {
     static void bubbleSort(int[] a, int n) {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n - 1 - i; j++) {
-                if (a[j] > a[j + 1]) {
-                    swap(a, j, j + 1);
+                if (a[j] > a[j + 1]) {  // 내림차순으로 바꾸려면 부등호만 바꾸면 됨
+                    swap(a, j, j + 1);  // 원본 배열을 바꿈 (in-place 정렬) -> 메모리 따추가로 안 잡아먹음
                 }
             }
         }
