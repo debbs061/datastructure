@@ -21,14 +21,14 @@ public class QuickSort_pivot_end {
     public static int partition(int[] nums, int left, int right) {
         int pivot = nums[right]; // 가장 오른쪽 요소를 pivot 값으로 지정
 
-        int i = (left - 1);
+        int i = left;
         for (int j = left; j < right; ++j) {
             if (nums[j] < pivot) {
-                ++i;
                 swap(nums, i, j);
+                i++;
             }
         }
-        int pivotPos = i + 1;
+        int pivotPos = i;
         swap(nums, pivotPos, right);
         return pivotPos;
     }
