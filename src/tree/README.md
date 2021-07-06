@@ -26,13 +26,13 @@
 * 하위 트리(subtree): 어떤 노드 아래의 모든 것을 포함하는 트리
     * 하위 트리 그 자체가 트리 ➜ 트리가 **재귀적으로 작동하기 좋은 자료구조**라는 걸 알 수 있다.
 
-<img src="./images/image-20210707060619519.png" alt="image-20210707060619519" style="zoom:50%;" />
+<img src="./images/image-20210707060619519.png" alt="image-20210707060619519"  width="400"/>
 
 
 
 ## 트리는 재귀적 자료구조
 
-<img src="./images/image-20210707061413288.png" alt="image-20210707061413288" style="zoom:50%;" />
+<img src="./images/image-20210707061413288.png" alt="image-20210707061413288"  width="400" />
 
 * 4 + 왼쪽 subtree 의 총합 + 오른쪽 subtree의 총합 .. ➜ 이렇게 재귀적으로 더해나갈 수 있다.
 
@@ -68,7 +68,7 @@ public class Node {
 }
 ```
 
-<img src="./images/image-20210707063053466.png" alt="image-20210707063053466" style="zoom:33%;" />
+<img src="./images/image-20210707063053466.png" alt="image-20210707063053466"  width="400" />
 
 ➜ 연결 리스트이다. 연결리스트는 결국 트리에서 좀 더 제약을 가한 자료구조이다.
 
@@ -146,7 +146,7 @@ public static void traverseInOrder(Node node) {
     * 아래 그림의 트리를 중위 순회하면 다음과 같은 수식이 나온다.
         * *A X (B-C) - (D+E)*
 
-<img src="./images/image-20210706070606036.png" alt="image-20210706070606036" style="zoom:50%;" />
+<img src="./images/image-20210706070606036.png" alt="image-20210706070606036"  width="400" />
 
 * 전위 표기법 (prefix notation)
     * 폴란드 표기법 (Polish notation) 이라고도 불림
