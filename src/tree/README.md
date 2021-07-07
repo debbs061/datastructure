@@ -98,21 +98,21 @@ public class Node {
 ### 1-1. 전위순회 (Preorder Traversal)
 
 방문순서 : `root → left → right`<br/>
-![binaryTree2](./images/preorder.jpeg)
+<img src="./images/preorder.jpeg" alt="preorder"  width="400" />
 `1 → 2 → 4 → 5 → 3`
 <br/><br/><br/>
 
 ### 1-2. 중위순회 (Inorder Traversal)
 
 방문순서 : `left → root → right`<br/>
-![binaryTree2](./images/inorder.jpeg)
+<img src="./images/inorder.jpeg" alt="preorder"  width="400" />
 `4 → 2 → 5 → 1 → 3`
 <br/><br/><br/>
 
 ### 1-3. 후위순회 (Postorder Traversal)
 
 방문순서 : `left → right → root`<br/>
-![binaryTree2](./images/postorder.jpeg)
+<img src="./images/postorder.jpeg" alt="preorder"  width="400" />
 `4 → 5 → 2 → 3 → 1`
 <br/><br/><br/>
 
