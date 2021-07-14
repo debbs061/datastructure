@@ -74,9 +74,8 @@ public class Node {
 ```
 
 ➜ 자식이 최대 하나인 트리는 연결 리스트이다. 연결 리스트는 결국 트리에서 좀 더 제약을 가한 자료구조이다. 
-<img src="./images/image-20210707063053466.png" alt="image-20210707063053466"  height="200" width="400" />
+<img src="./images/image-20210707063053466.png" alt="image-20210707063053466"  height="300" width="300" />
 <br/>
-
 ## 트리의 용도
 
 * 계층적 데이터를 표현

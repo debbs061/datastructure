@@ -4,7 +4,6 @@ public class Program
 {
     public static void main(String[] args) {
         Node root = new Node(50);
-
         Node.insertRecursive(root, 24);
         Node.insertRecursive(root, 42);
         Node.insertRecursive(root, 33);
